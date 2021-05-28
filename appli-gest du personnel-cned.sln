@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appli-gest du personnel-cned", "appli-gest du personnel-cned\appli-gest du personnel-cned.csproj", "{0AEC8AEF-43C7-4AFA-A710-2D7F12ACFE28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appli_gest_du_personnel_cned", "appli-gest du personnel-cned\appli_gest_du_personnel_cned.csproj", "{0AEC8AEF-43C7-4AFA-A710-2D7F12ACFE28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -36,8 +36,6 @@ namespace appli_gest_du_personnel_cned
             this.txtboxlogin = new System.Windows.Forms.TextBox();
             this.txtboxpwd = new System.Windows.Forms.TextBox();
             this.btnconnecter = new System.Windows.Forms.Button();
-            this.btnexit = new System.Windows.Forms.Button();
-            this.btnhome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gestperso
@@ -105,27 +103,6 @@ namespace appli_gest_du_personnel_cned
             this.btnconnecter.TabIndex = 10;
             this.btnconnecter.UseVisualStyleBackColor = true;
             // 
-            // btnexit
-            // 
-            this.btnexit.BackgroundImage = global::appli_gest_du_personnel_cned.Properties.Resources.exit_icon;
-            this.btnexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnexit.Location = new System.Drawing.Point(12, 398);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(85, 73);
-            this.btnexit.TabIndex = 11;
-            this.btnexit.UseVisualStyleBackColor = true;
-            // 
-            // btnhome
-            // 
-            this.btnhome.BackgroundImage = global::appli_gest_du_personnel_cned.Properties.Resources.home;
-            this.btnhome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnhome.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnhome.Location = new System.Drawing.Point(12, 205);
-            this.btnhome.Name = "btnhome";
-            this.btnhome.Size = new System.Drawing.Size(85, 73);
-            this.btnhome.TabIndex = 12;
-            this.btnhome.UseVisualStyleBackColor = true;
-            // 
             // appGestPers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,8 +111,6 @@ namespace appli_gest_du_personnel_cned
             this.BackgroundImage = global::appli_gest_du_personnel_cned.Properties.Resources.gestion_du_personnel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(848, 493);
-            this.Controls.Add(this.btnhome);
-            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnconnecter);
             this.Controls.Add(this.txtboxpwd);
             this.Controls.Add(this.txtboxlogin);
@@ -159,8 +134,6 @@ namespace appli_gest_du_personnel_cned
         private System.Windows.Forms.TextBox txtboxlogin;
         private System.Windows.Forms.TextBox txtboxpwd;
         private System.Windows.Forms.Button btnconnecter;
-        private System.Windows.Forms.Button btnexit;
-        private System.Windows.Forms.Button btnhome;
     }
 }
 

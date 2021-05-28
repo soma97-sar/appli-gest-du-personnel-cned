@@ -1,4 +1,5 @@
-﻿using System;
+﻿using appli_gest_du_personnel_cned.controleur;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace appli_gest_du_personnel_cned.vue
 {
     public partial class respogestion : Form
     {
+        private  classecontroleur classecontroleur;
+
         public respogestion()
         {
             InitializeComponent();
+        }
+
+        public respogestion(classecontroleur classecontroleur)
+        {
+            this.classecontroleur = classecontroleur;
         }
 
         private void respogestion_Load(object sender, EventArgs e)
@@ -30,6 +38,13 @@ namespace appli_gest_du_personnel_cned.vue
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        internal class ShowDialog
+        {
+            public ShowDialog()
+            {
+            }
         }
     }
 }
