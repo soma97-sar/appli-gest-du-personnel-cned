@@ -53,7 +53,7 @@ namespace appli_gest_du_personnel_cned.dal
             connexiondatabase curseur = connexiondatabase.GetInstance(connectionString);
             curseur.ReqSelect(req);
             while (curseur.Read())
-            {
+            {//c'est quoi le probleme????
                 Classabsence absence = new Classabsence((string)curseur.Field("datedebut"), (string)curseur.Field("datefin"), (int)curseur.Field("idpersonnel"), (int)curseur.Field("idmotif"));
                 LesAbsences.Add(absence);
             }
