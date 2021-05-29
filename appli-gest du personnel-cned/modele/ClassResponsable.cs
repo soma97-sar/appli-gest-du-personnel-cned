@@ -26,7 +26,7 @@ namespace appli_gest_du_personnel_cned.modele
             this.login = login ;
             this.pwd = pwd ;
         
-
+            
         }
 
     }
