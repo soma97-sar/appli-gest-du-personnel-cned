@@ -21,7 +21,7 @@ namespace appli_gest_du_personnel_cned.controleur
        
 
         /// <summary>
-        /// Récupère et retourne les infos des personnels
+        /// Récupère et retourne les personnels
         /// </summary>
         /// <returns>liste personnel</returns>
         public List<claspersonnel> Getpersonnel()
