@@ -74,6 +74,8 @@ namespace appli_gest_du_personnel_cned.vue
             this.textBoxdfin = new System.Windows.Forms.TextBox();
             this.cobboxmotif = new System.Windows.Forms.ComboBox();
             this.dataGridVabsence = new System.Windows.Forms.DataGridView();
+            this.comboBoxservice = new System.Windows.Forms.ComboBox();
+            this.labelservice = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewperso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVabsence)).BeginInit();
@@ -147,7 +149,7 @@ namespace appli_gest_du_personnel_cned.vue
             this.médiationCulturelleToolStrserv,
             this.prêtToolStripserv});
             this.afficherToolStripservice.Name = "afficherToolStripservice";
-            this.afficherToolStripservice.Size = new System.Drawing.Size(224, 26);
+            this.afficherToolStripservice.Size = new System.Drawing.Size(142, 26);
             this.afficherToolStripservice.Text = "afficher";
             // 
             // administratifToolStrserv
@@ -182,28 +184,28 @@ namespace appli_gest_du_personnel_cned.vue
             // afficherToolStripabsence
             // 
             this.afficherToolStripabsence.Name = "afficherToolStripabsence";
-            this.afficherToolStripabsence.Size = new System.Drawing.Size(224, 26);
+            this.afficherToolStripabsence.Size = new System.Drawing.Size(159, 26);
             this.afficherToolStripabsence.Text = "afficher";
             this.afficherToolStripabsence.Click += new System.EventHandler(this.afficherToolStripabsence_Click);
             // 
             // ajouterToolStrabs
             // 
             this.ajouterToolStrabs.Name = "ajouterToolStrabs";
-            this.ajouterToolStrabs.Size = new System.Drawing.Size(224, 26);
+            this.ajouterToolStrabs.Size = new System.Drawing.Size(159, 26);
             this.ajouterToolStrabs.Text = "ajouter";
             this.ajouterToolStrabs.Click += new System.EventHandler(this.ajouterToolStrabs_Click);
             // 
             // modifierToolStripabs
             // 
             this.modifierToolStripabs.Name = "modifierToolStripabs";
-            this.modifierToolStripabs.Size = new System.Drawing.Size(224, 26);
+            this.modifierToolStripabs.Size = new System.Drawing.Size(159, 26);
             this.modifierToolStripabs.Text = "modifier";
             this.modifierToolStripabs.Click += new System.EventHandler(this.modifierToolStripabs_Click);
             // 
             // supprimerToolStripabs
             // 
             this.supprimerToolStripabs.Name = "supprimerToolStripabs";
-            this.supprimerToolStripabs.Size = new System.Drawing.Size(224, 26);
+            this.supprimerToolStripabs.Size = new System.Drawing.Size(159, 26);
             this.supprimerToolStripabs.Text = "supprimer";
             this.supprimerToolStripabs.Click += new System.EventHandler(this.supprimerToolStripabs_Click);
             // 
@@ -223,31 +225,31 @@ namespace appli_gest_du_personnel_cned.vue
             this.motifFamilialToolStripMenuItem,
             this.congéParentalToolStripMenuItem});
             this.afficherToolStripMotif.Name = "afficherToolStripMotif";
-            this.afficherToolStripMotif.Size = new System.Drawing.Size(224, 26);
+            this.afficherToolStripMotif.Size = new System.Drawing.Size(142, 26);
             this.afficherToolStripMotif.Text = "afficher";
             // 
             // vacanceToolStripMenuItem
             // 
             this.vacanceToolStripMenuItem.Name = "vacanceToolStripMenuItem";
-            this.vacanceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.vacanceToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.vacanceToolStripMenuItem.Text = "vacance";
             // 
             // maladieToolStripMenuItem
             // 
             this.maladieToolStripMenuItem.Name = "maladieToolStripMenuItem";
-            this.maladieToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.maladieToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.maladieToolStripMenuItem.Text = "maladie";
             // 
             // motifFamilialToolStripMenuItem
             // 
             this.motifFamilialToolStripMenuItem.Name = "motifFamilialToolStripMenuItem";
-            this.motifFamilialToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.motifFamilialToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.motifFamilialToolStripMenuItem.Text = "motif familial";
             // 
             // congéParentalToolStripMenuItem
             // 
             this.congéParentalToolStripMenuItem.Name = "congéParentalToolStripMenuItem";
-            this.congéParentalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.congéParentalToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.congéParentalToolStripMenuItem.Text = "congé parental";
             // 
             // dataGridViewperso
@@ -309,7 +311,7 @@ namespace appli_gest_du_personnel_cned.vue
             // lbltelperso
             // 
             this.lbltelperso.AutoSize = true;
-            this.lbltelperso.Location = new System.Drawing.Point(443, 288);
+            this.lbltelperso.Location = new System.Drawing.Point(419, 290);
             this.lbltelperso.Name = "lbltelperso";
             this.lbltelperso.Size = new System.Drawing.Size(23, 17);
             this.lbltelperso.TabIndex = 7;
@@ -318,7 +320,7 @@ namespace appli_gest_du_personnel_cned.vue
             // lblmailperso
             // 
             this.lblmailperso.AutoSize = true;
-            this.lblmailperso.Location = new System.Drawing.Point(443, 326);
+            this.lblmailperso.Location = new System.Drawing.Point(419, 326);
             this.lblmailperso.Name = "lblmailperso";
             this.lblmailperso.Size = new System.Drawing.Size(33, 17);
             this.lblmailperso.TabIndex = 8;
@@ -401,7 +403,7 @@ namespace appli_gest_du_personnel_cned.vue
             // 
             // textBoxtel
             // 
-            this.textBoxtel.Location = new System.Drawing.Point(514, 285);
+            this.textBoxtel.Location = new System.Drawing.Point(458, 285);
             this.textBoxtel.Name = "textBoxtel";
             this.textBoxtel.Size = new System.Drawing.Size(353, 22);
             this.textBoxtel.TabIndex = 17;
@@ -415,7 +417,7 @@ namespace appli_gest_du_personnel_cned.vue
             // 
             // textBoxmail
             // 
-            this.textBoxmail.Location = new System.Drawing.Point(514, 323);
+            this.textBoxmail.Location = new System.Drawing.Point(458, 321);
             this.textBoxmail.Name = "textBoxmail";
             this.textBoxmail.Size = new System.Drawing.Size(353, 22);
             this.textBoxmail.TabIndex = 19;
@@ -458,12 +460,35 @@ namespace appli_gest_du_personnel_cned.vue
             this.dataGridVabsence.Size = new System.Drawing.Size(976, 119);
             this.dataGridVabsence.TabIndex = 23;
             // 
+            // comboBoxservice
+            // 
+            this.comboBoxservice.FormattingEnabled = true;
+            this.comboBoxservice.Items.AddRange(new object[] {
+            "administratif",
+            "médiation culturelle",
+            "prêt"});
+            this.comboBoxservice.Location = new System.Drawing.Point(841, 319);
+            this.comboBoxservice.Name = "comboBoxservice";
+            this.comboBoxservice.Size = new System.Drawing.Size(158, 24);
+            this.comboBoxservice.TabIndex = 24;
+            // 
+            // labelservice
+            // 
+            this.labelservice.AutoSize = true;
+            this.labelservice.Location = new System.Drawing.Point(838, 283);
+            this.labelservice.Name = "labelservice";
+            this.labelservice.Size = new System.Drawing.Size(53, 17);
+            this.labelservice.TabIndex = 25;
+            this.labelservice.Text = "service";
+            // 
             // respogestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1045, 671);
+            this.Controls.Add(this.labelservice);
+            this.Controls.Add(this.comboBoxservice);
             this.Controls.Add(this.dataGridVabsence);
             this.Controls.Add(this.cobboxmotif);
             this.Controls.Add(this.textBoxdfin);
@@ -548,5 +573,7 @@ namespace appli_gest_du_personnel_cned.vue
         private System.Windows.Forms.TextBox textBoxdfin;
         private System.Windows.Forms.ComboBox cobboxmotif;
         private System.Windows.Forms.DataGridView dataGridVabsence;
+        private System.Windows.Forms.ComboBox comboBoxservice;
+        private System.Windows.Forms.Label labelservice;
     }
 }
