@@ -37,11 +37,6 @@ namespace appli_gest_du_personnel_cned.dal
             return LesPersonnels;
         }
 
-        //internal static List<claspersonnel> Getpersonnel()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         internal static List<ClassResponsable> GetResponsable()
         {
             throw new NotImplementedException();
