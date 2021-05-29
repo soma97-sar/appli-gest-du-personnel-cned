@@ -15,7 +15,7 @@ namespace appli_gest_du_personnel_cned.dal
         /// <summary>
         /// chaine de connexion à la bdd
         /// </summary>
-        private static string connectionString = "server=localhost;user id=root;database=gestioperso;port=3306;";
+        private static string connectionString = "server=localhost;user id=root;database=gestioperso";
 
         /// <summary>
         /// Récupère et retourne les personnels provenant de la BDD
