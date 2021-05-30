@@ -46,23 +46,32 @@ namespace appli_gest_du_personnel_cned.connexion
             }
         }
 
-        internal void ReqSelect(string req)
-        {
-            throw new NotImplementedException();
-        }
+        //internal void ReqSelect(string req)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        /// <summary>
-        /// Crée une instance unique de la classe
-        /// </summary>
-        /// <param name="stringConnect">chaine de connexion</param>
-        /// <returns>instance unique de la classe</returns>
+        
         public static connexiondatabase GetInstance(string stringConnect)
         {
             if (instance is null)
             {
-                instance = new connexiondatabase (stringConnect);
+                instance = new connexiondatabase(stringConnect);
             }
             return instance;
+        }
+        internal void ReqSelect(string req)
+        { 
+            try
+            {
+                command = new MySqlCommand(req, connection);
+                command.Prepare();
+                reader = command.ExecuteReader();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         /// <summary>

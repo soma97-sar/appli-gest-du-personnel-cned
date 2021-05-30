@@ -4,6 +4,7 @@ using System;
 using MySql.Data.MySqlClient;
 using appli_gest_du_personnel_cned.connexion;
 using appli_gest_du_personnel_cned.modele;
+using appli_gest_du_personnel_cned.controleur;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace appli_gest_du_personnel_cned.dal
         /// <summary>
         /// chaine de connexion à la bdd
         /// </summary>
-        private static string connectionString = "server=localhost;user id=root;database=gestioperso";
+        private static string connectionString = "server=localhost;user=root;database=gestioperso";
 
         /// <summary>
         /// Récupère et retourne les personnels provenant de la BDD
@@ -24,19 +25,21 @@ namespace appli_gest_du_personnel_cned.dal
         public static List<claspersonnel> Getpersonnel()
         {
             List<claspersonnel> LesPersonnels = new List<claspersonnel>();
-            string req = "select p.idpersonnel as idpersonnel, p.nom as nom, p.prenom as prenom, p.tel as tel, p.mail as mail, s.idservice as idservice ";
+            string req = "select feuil1  , idpersonnel , idservice , mail , nom , prenom,tel,  idservice from  feuil1 join service  on (idservice= idservice); ";
             // req += "from personnel p join service s on (p.idservice = s.idservice) ";
-            req += "order by idpersonnel;";
+           // req += "order by idpersonnel;";
             connexiondatabase curseur = connexiondatabase.GetInstance(connectionString);
-            curseur.ReqSelect(req);
+            curseur.ReqSelect(req, null);
             while (curseur.Read())
             {
-                claspersonnel personnel = new claspersonnel((int)curseur.Field("idpersonnel"), (string)curseur.Field("nom"), (string)curseur.Field("prenom"), (string)curseur.Field("tel"), (string)curseur.Field("mail"), (int)curseur.Field("idservice"));
+                claspersonnel personnel = new claspersonnel((int)curseur.Field("idpersonnel"), (int)curseur.Field("idservice"),(string)curseur.Field("mail"), (string)curseur.Field("nom"), (string)curseur.Field("prenom"), (string)curseur.Field("tel") );
                 LesPersonnels.Add(personnel);
             }
             curseur.Close();
             return LesPersonnels;
+            
         }
+        
 
         internal static List<ClassResponsable> GetResponsable()
         {
@@ -52,9 +55,9 @@ namespace appli_gest_du_personnel_cned.dal
             List<Classabsence> LesAbsences = new List<Classabsence>();
             string req = "select * from absence order by datedebut ;";
             connexiondatabase curseur = connexiondatabase.GetInstance(connectionString);
-            curseur.ReqSelect(req);
+            curseur.ReqSelect(req, null);
             while (curseur.Read())
-            {//c'est quoi le probleme????
+            {
                 Classabsence absence = new Classabsence((int)curseur.Field("datedebut"), (string)curseur.Field("datefin"), (string)curseur.Field("idpersonnel"), (int)curseur.Field("idmotif"));
                 LesAbsences.Add(absence);
             }

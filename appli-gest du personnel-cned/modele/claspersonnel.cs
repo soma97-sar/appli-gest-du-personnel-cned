@@ -9,6 +9,7 @@ namespace appli_gest_du_personnel_cned.modele
         private string prenom;
         private string tel;
         private string mail;
+       
         private int idservice;
        
 
@@ -17,6 +18,7 @@ namespace appli_gest_du_personnel_cned.modele
         public string Prenom { get => prenom; }
         public string Tel { get => tel; }
         public string Mail { get => mail; }
+        
         public int Idservice  { get => idservice; }
         
        
@@ -31,7 +33,7 @@ namespace appli_gest_du_personnel_cned.modele
         /// <param name="mail"></param>
         /// <param name="idservice"></param>
        
-        public claspersonnel(int idpersonnel, string nom, string prenom, string tel, string mail, int idservice )
+        public claspersonnel(int idpersonnel, int idservice, string mail, string nom, string prenom, string tel)  
         {
             this.idpersonnel = idpersonnel;
             this.nom = nom;

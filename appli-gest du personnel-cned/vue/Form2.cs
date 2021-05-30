@@ -15,7 +15,9 @@ namespace appli_gest_du_personnel_cned.vue
 {
     public partial class respogestion : Form
     {
-        private classecontroleur classecontroleur;
+        
+        private Clcontrole classecontroleur;
+        
         private Boolean modification = false;
         BindingSource bdgpersonnel = new BindingSource();
         BindingSource bdgabsence = new BindingSource();
@@ -24,7 +26,7 @@ namespace appli_gest_du_personnel_cned.vue
         {
             InitializeComponent();
         }
-        public respogestion(classecontroleur classecontroleur)
+        public respogestion(Clcontrole classecontroleur)
         {
             InitializeComponent();
             this.classecontroleur = classecontroleur;
@@ -107,7 +109,7 @@ namespace appli_gest_du_personnel_cned.vue
                     idpersonnel= (int)dataGridViewperso.SelectedRows[0].Cells["idpersonnel"].Value;
                     idservice = (int)dataGridViewperso.SelectedRows[0].Cells["idservice"].Value;
                 }
-                claspersonnel personnel  = new claspersonnel(idpersonnel, textBoxnom.Text, textBoxprenom.Text, textBoxtel.Text, textBoxmail.Text,idservice);
+                claspersonnel personnel  = new claspersonnel(idpersonnel, idservice, textBoxmail.Text, textBoxnom.Text, textBoxprenom.Text, textBoxtel.Text);
                 if (modification)
                 {
                     classecontroleur.Updatepersonnel(personnel);

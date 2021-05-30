@@ -17,8 +17,8 @@ namespace appli_gest_du_personnel_cned
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
- //           Application.Run(new appGestPers());
-            new classecontroleur();
+            Application.Run(new appGestPers());
+            new Clcontrole();
         }
     }
 }

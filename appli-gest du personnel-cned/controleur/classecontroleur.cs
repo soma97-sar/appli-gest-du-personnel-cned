@@ -9,16 +9,14 @@ using System;
 
 namespace appli_gest_du_personnel_cned.controleur
 {
-   public class classecontroleur
+   public class Clcontrole
     {
-        /// <summary>
-        /// Ouverture de la fenêtre
-        /// </summary>
-        public classecontroleur()
-        {
-            new respogestion().ShowDialog();
-        }
-       
+        
+        //public Clcontrole()
+        //{
+        //    new respogestion().ShowDialog();
+        //}
+
 
         /// <summary>
         /// Récupère et retourne les personnels

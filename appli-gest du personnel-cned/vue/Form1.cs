@@ -13,12 +13,12 @@ namespace appli_gest_du_personnel_cned
 {
     public partial class appGestPers : Form
     {
-        private classecontroleur control;
+        private Clcontrole control;
         public appGestPers()
         {
             InitializeComponent();
         }
-        public appGestPers(classecontroleur control)
+        public appGestPers(Clcontrole control)
         {
             InitializeComponent();
             this.control = control;
@@ -27,7 +27,7 @@ namespace appli_gest_du_personnel_cned
         private void btnconnecter_Click(object sender, EventArgs e)
         {
            
-            if(!classecontroleur.Controlelogin(txtboxlogin.Text, txtboxpwd.Text))
+            if(!Clcontrole.Controlelogin(txtboxlogin.Text, txtboxpwd.Text))
                {
                 MessageBox.Show("erreur!!!");
                 txtboxlogin.Text = "";
